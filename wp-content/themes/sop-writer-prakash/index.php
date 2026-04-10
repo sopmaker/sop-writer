@@ -5,11 +5,6 @@
  * @package SOP_Writer_Prakash
  */
 
-if (is_front_page()) {
-    get_template_part('front-page');
-    return;
-}
-
 get_header();
 ?>
 <main class="container" style="padding: 72px 0;">
