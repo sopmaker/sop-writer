@@ -2,7 +2,7 @@
 
 Custom WordPress theme for **SOP Writer Prakash** is available at:
 
-`/home/runner/work/sop-writer/sop-writer/wp-content/themes/sop-writer-prakash`
+`wp-content/themes/sop-writer-prakash`
 
 ## How to use
 
