@@ -15,9 +15,10 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <?php
-$about_link = is_front_page() ? '#about' : home_url('/#about');
-$usp_link = is_front_page() ? '#usp' : home_url('/#usp');
-$difference_link = is_front_page() ? '#difference' : home_url('/#difference');
+$profile_link = is_front_page() ? '#profile' : home_url('/#profile');
+$services_link = is_front_page() ? '#services' : home_url('/#services');
+$process_link = is_front_page() ? '#process' : home_url('/#process');
+$verdict_link = is_front_page() ? '#verdict' : home_url('/#verdict');
 $contact_link = is_front_page() ? '#contact' : home_url('/#contact');
 ?>
 <header class="site-header">
@@ -27,9 +28,10 @@ $contact_link = is_front_page() ? '#contact' : home_url('/#contact');
         </a>
         <nav aria-label="Primary">
             <ul class="menu">
-                <li><a href="<?php echo esc_url($about_link); ?>">About</a></li>
-                <li><a href="<?php echo esc_url($usp_link); ?>">USP</a></li>
-                <li><a href="<?php echo esc_url($difference_link); ?>">Why Prakash</a></li>
+                <li><a href="<?php echo esc_url($profile_link); ?>">Profile</a></li>
+                <li><a href="<?php echo esc_url($services_link); ?>">Services</a></li>
+                <li><a href="<?php echo esc_url($process_link); ?>">Process</a></li>
+                <li><a href="<?php echo esc_url($verdict_link); ?>">Verdict</a></li>
                 <li><a href="<?php echo esc_url($contact_link); ?>">Contact</a></li>
             </ul>
         </nav>

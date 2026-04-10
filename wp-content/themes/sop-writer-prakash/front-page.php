@@ -12,111 +12,159 @@ get_header();
     <section class="hero">
         <div class="container hero-grid">
             <div>
-                <span class="eyebrow">Premium SOP Writing in India</span>
-                <h1>Confident SOPs, crafted by Prakash — not outsourced to inexperienced teams.</h1>
+                <span class="eyebrow">Luxury Editorial SOP Counsel</span>
+                <h1>Prakash</h1>
+                <p class="hero-subtitle">India's foremost SOP specialist.</p>
                 <p>
-                    With 8.5+ years of focused SOP writing experience, Prakash helps students, visa applicants,
-                    consultants, and travelers present a clear and powerful purpose statement for admissions, visas,
-                    and special documentation needs.
+                    Built for applicants who cannot afford uncertainty, this practice delivers statement of purpose
+                    writing with legal-grade structure, consulting-level rigor, and editorial polish expected by global
+                    institutions.
                 </p>
                 <div class="cta-row">
-                    <a class="btn btn-primary" href="#difference">See Why Prakash</a>
-                    <a class="btn btn-secondary" href="#usp">Explore USP</a>
+                    <a class="btn btn-primary" href="#contact">Book a Consultation</a>
+                    <a class="btn btn-secondary" href="#verdict">Read the Verdict</a>
                 </div>
             </div>
             <aside class="hero-card">
-                <h2>What clients value most</h2>
+                <h2>Authority by design</h2>
                 <div class="stats">
                     <div class="stat">
                         <strong>8.5+ Years</strong>
-                        <span>Hands-on SOP domain expertise</span>
+                        <span>Specialized SOP execution across admissions and visa pathways</span>
                     </div>
                     <div class="stat">
-                        <strong>Direct Expert Work</strong>
-                        <span>No intern-led writing workflow</span>
+                        <strong>One Principal</strong>
+                        <span>Your strategy and writing are led directly by Prakash</span>
                     </div>
                     <div class="stat">
-                        <strong>Quality-first</strong>
-                        <span>Clear, authentic, purpose-led narratives</span>
+                        <strong>High-Stakes Ready</strong>
+                        <span>Disciplined narrative architecture built for scrutiny</span>
                     </div>
                 </div>
             </aside>
         </div>
     </section>
 
-    <section id="about">
+    <section id="profile">
         <div class="container">
-            <h2>About Prakash</h2>
+            <h2>Principal Profile</h2>
             <p class="section-lead">
-                Prakash is a statement of purpose specialist known for understanding each applicant's goals at a deep
-                level. His approach combines storytelling clarity, strategic positioning, and document discipline to
-                deliver SOPs that feel authentic and submission-ready.
+                Prakash brings a boutique advisory model to SOP writing: selective intake, deep profile diagnosis, and
+                precise drafting. Each engagement is treated as a formal case where narrative, intent, and evidence
+                must align without compromise.
             </p>
             <div class="grid-3">
                 <article class="card">
-                    <h3>Student Admissions</h3>
-                    <p>Programs across undergraduate, postgraduate, and professional tracks.</p>
+                    <h3>Strategic Positioning</h3>
+                    <p>Your profile is framed with intent, clarity, and institutional relevance.</p>
                 </article>
                 <article class="card">
-                    <h3>Visa SOP Requirements</h3>
-                    <p>Structured, context-aware SOPs aligned to visa and immigration expectations.</p>
+                    <h3>Editorial Precision</h3>
+                    <p>Every paragraph is calibrated for flow, confidence, and decision-maker readability.</p>
                 </article>
                 <article class="card">
-                    <h3>Special Purpose SOPs</h3>
-                    <p>Tailored SOPs for unique profiles, career shifts, and non-standard cases.</p>
+                    <h3>Professional Accountability</h3>
+                    <p>Senior oversight is never delegated, diluted, or outsourced.</p>
                 </article>
             </div>
         </div>
     </section>
 
-    <section id="usp">
+    <section id="services">
         <div class="container">
-            <h2>Core USP of SOP Writer Prakash</h2>
+            <h2>Services</h2>
             <p class="section-lead">
-                Every SOP is written with ownership, precision, and accountability. You work with someone who understands
-                the stakes and treats your profile as a serious professional case.
+                Engagements are designed for serious candidates across competitive tracks where document quality directly
+                impacts outcomes.
             </p>
             <div class="grid-3">
                 <article class="card">
-                    <h3>Profile-First Strategy</h3>
-                    <p>Your achievements, purpose, and intent are shaped into a coherent narrative, not generic text.</p>
+                    <h3>Admissions SOPs</h3>
+                    <p>Undergraduate, postgraduate, MBA, and specialized academic applications.</p>
                 </article>
                 <article class="card">
-                    <h3>Experienced Judgment</h3>
-                    <p>Years of SOP-focused work help avoid weak framing and improve overall impact and clarity.</p>
+                    <h3>Visa SOPs</h3>
+                    <p>Country-aware statements aligned with policy expectations and intent clarity.</p>
                 </article>
                 <article class="card">
-                    <h3>Premium Quality Control</h3>
-                    <p>Language quality, flow, consistency, and tone are refined to a top-notch submission standard.</p>
+                    <h3>Complex Profiles</h3>
+                    <p>Career pivots, gap years, refusals, and non-linear journeys handled with rigor.</p>
                 </article>
             </div>
         </div>
     </section>
 
-    <section id="difference">
+    <section id="process">
         <div class="container">
-            <h2>Prakash vs Typical SOP Writing Companies</h2>
+            <h2>Engagement Process</h2>
             <p class="section-lead">
-                Many large SOP agencies cut costs by assigning drafts to interns or freshers. That may reduce price, but
-                it can also reduce quality and increase risk in high-stakes applications.
+                A structured, executive-style process minimizes noise and maximizes clarity from first brief to final
+                submission draft.
+            </p>
+            <div class="grid-3">
+                <article class="card">
+                    <h3>01 — Diagnostic Briefing</h3>
+                    <p>Goals, profile strengths, risk areas, and destination requirements are mapped.</p>
+                </article>
+                <article class="card">
+                    <h3>02 — Narrative Architecture</h3>
+                    <p>A decisive storyline is built to connect background, purpose, and future trajectory.</p>
+                </article>
+                <article class="card">
+                    <h3>03 — Final Editorial Finish</h3>
+                    <p>Tone, logic, cadence, and authenticity are refined to premium submission standards.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Institutional Confidence</h2>
+            <p class="section-lead">
+                This practice is built for applicants who value discretion, precision, and strategic communication over
+                volume-driven drafting pipelines.
+            </p>
+            <div class="grid-3">
+                <article class="card">
+                    <h3>Confidential Handling</h3>
+                    <p>Every profile and personal detail is managed with strict professional discretion.</p>
+                </article>
+                <article class="card">
+                    <h3>Senior-Led Delivery</h3>
+                    <p>No transfer to interns or anonymous writers after onboarding.</p>
+                </article>
+                <article class="card">
+                    <h3>Decision-Focused Writing</h3>
+                    <p>Built for admissions and immigration evaluators who prioritize coherence and intent.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="verdict">
+        <div class="container">
+            <h2>Prakash vs Agencies — The Verdict</h2>
+            <p class="section-lead">
+                In high-stakes SOP work, presentation without depth is a liability. The distinction is straightforward.
             </p>
             <div class="comparison">
                 <article class="card highlight">
-                    <h3>With Prakash</h3>
+                    <h3>For Prakash</h3>
                     <ul>
-                        <li>Direct work with an experienced SOP professional</li>
-                        <li>Dedicated attention to your unique profile and objectives</li>
-                        <li>Senior-level writing ownership and quality accountability</li>
-                        <li>Serious, confidence-driven handling of your case</li>
+                        <li>Principal-led drafting with senior accountability from start to finish</li>
+                        <li>Case-specific strategy built around your actual profile and goals</li>
+                        <li>Editorial discipline designed for critical institutional review</li>
+                        <li>Consistent quality standard with no workflow handoffs</li>
                     </ul>
                 </article>
                 <article class="card">
-                    <h3>With Many Agencies</h3>
+                    <h3>For Typical Agencies</h3>
                     <ul>
-                        <li>Often distributed to junior or intern-heavy writing pipelines</li>
-                        <li>Inconsistent writing quality across drafts</li>
-                        <li>Lower pricing can come with lower personalization</li>
-                        <li>Higher chance of generic output for critical applications</li>
+                        <li>Drafting is frequently delegated into junior-heavy delivery chains</li>
+                        <li>Turnaround speed can override strategic narrative depth</li>
+                        <li>Quality often fluctuates between writers and revisions</li>
+                        <li>Generic language increases risk in decisive applications</li>
                     </ul>
                 </article>
             </div>
