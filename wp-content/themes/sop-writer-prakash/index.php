@@ -7,7 +7,7 @@
 
 get_header();
 ?>
-<main class="container" style="padding: 72px 0;">
+<main class="container content-wrap">
     <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
             <article <?php post_class(); ?>>
