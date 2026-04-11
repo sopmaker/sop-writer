@@ -9,12 +9,17 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+require_once get_template_directory() . '/inc/content-data.php';
+require_once get_template_directory() . '/inc/section-pages.php';
+
 function sop_writer_prakash_setup()
 {
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
 }
 add_action('after_setup_theme', 'sop_writer_prakash_setup');
+
+add_action('after_switch_theme', 'sop_writer_prakash_register_section_pages');
 
 function sop_writer_prakash_assets()
 {

@@ -3,7 +3,7 @@ Theme Name: SOP Writer Prakash
 Theme URI: https://example.com/sop-writer-prakash
 Author: SOP Writer Team
 Description: A bright and modern WordPress theme for SOP Writer Prakash.
-Version: 1.4.0
+Version: 1.5.0
 Text Domain: sop-writer-prakash
 */
 
@@ -35,7 +35,8 @@ body {
   margin: 0;
   color: var(--text);
   font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
-  line-height: 1.7;
+  font-size: 16px;
+  line-height: 1.6;
   background: linear-gradient(180deg, #f9fdf9 0%, #edf8ee 100%);
 }
 
@@ -49,19 +50,20 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-size: clamp(1.9rem, 4.2vw, 3rem);
 }
 
 h2 {
-  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  font-size: clamp(1.4rem, 3.2vw, 2.1rem);
 }
 
 h3 {
-  font-size: 1.12rem;
+  font-size: 1.02rem;
 }
 
 p {
   color: var(--text-muted);
+  font-size: 0.98rem;
   margin: 0 0 16px;
   max-width: 75ch;
 }
@@ -112,8 +114,8 @@ a {
   text-decoration: none;
   color: #43614a;
   font-weight: 600;
-  font-size: 0.84rem;
-  letter-spacing: 0.05em;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   padding: 8px 10px;
   border-radius: 8px;
@@ -125,7 +127,7 @@ a {
 }
 
 section {
-  padding: 84px 0;
+  padding: 76px 0;
 }
 
 .section-soft {
@@ -135,7 +137,7 @@ section {
 }
 
 .hero {
-  padding-top: 102px;
+  padding-top: 90px;
 }
 
 .hero-grid {
@@ -158,7 +160,7 @@ section {
 
 .hero-subtitle {
   color: #2d5a35;
-  font-size: clamp(1.02rem, 2.4vw, 1.32rem);
+  font-size: clamp(1rem, 2.1vw, 1.2rem);
   margin-bottom: 18px;
 }
 
@@ -167,7 +169,7 @@ section {
   border: 1px solid var(--line);
   border-radius: 14px;
   box-shadow: 0 14px 30px rgba(38, 88, 45, 0.08);
-  padding: 24px;
+  padding: 22px;
 }
 
 .profile-card img {
@@ -188,11 +190,11 @@ section {
 .btn {
   display: inline-block;
   text-decoration: none;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 12px 18px;
+  padding: 10px 16px;
   border-radius: 10px;
   border: 1px solid transparent;
   transition: all 0.2s ease;
@@ -231,7 +233,7 @@ section {
   background: var(--accent-soft);
   border-radius: 999px;
   padding: 8px 12px;
-  font-size: 0.84rem;
+  font-size: 0.8rem;
   color: #31553a;
 }
 
@@ -294,8 +296,42 @@ section {
   color: #2f5d37;
   border-radius: 999px;
   padding: 8px 14px;
-  font-size: 0.84rem;
+  font-size: 0.8rem;
   font-weight: 600;
+}
+
+.section-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.section-note {
+  margin-top: 20px;
+  color: #3f5f46;
+}
+
+.section-copy {
+  margin-top: 18px;
+}
+
+.page-main .section-lead {
+  max-width: 70ch;
+}
+
+.page-hero {
+  padding: 72px 0 36px;
+}
+
+.page-content {
+  padding-bottom: 72px;
+}
+
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
 }
 
 .callout-card {
@@ -477,6 +513,10 @@ section {
   .grid-3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .logo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 900px) {
@@ -503,6 +543,10 @@ section {
 
   .grid-3,
   .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .logo-grid {
     grid-template-columns: 1fr;
   }
 
