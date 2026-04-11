@@ -15,23 +15,25 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <?php
-$profile_link = is_front_page() ? '#profile' : home_url('/#profile');
+$about_link = is_front_page() ? '#about' : home_url('/#about');
 $services_link = is_front_page() ? '#services' : home_url('/#services');
-$process_link = is_front_page() ? '#process' : home_url('/#process');
-$verdict_link = is_front_page() ? '#verdict' : home_url('/#verdict');
+$proof_link = is_front_page() ? '#proof' : home_url('/#proof');
+$video_link = is_front_page() ? '#video' : home_url('/#video');
+$reviews_link = is_front_page() ? '#reviews' : home_url('/#reviews');
 $contact_link = is_front_page() ? '#contact' : home_url('/#contact');
 ?>
 <header class="site-header">
     <div class="container">
         <a class="brand" href="<?php echo esc_url(home_url('/')); ?>">
-            SOP Writer Prakash
+            SOP by Prakash
         </a>
         <nav aria-label="Primary">
             <ul class="menu">
-                <li><a href="<?php echo esc_url($profile_link); ?>">Profile</a></li>
+                <li><a href="<?php echo esc_url($about_link); ?>">About</a></li>
                 <li><a href="<?php echo esc_url($services_link); ?>">Services</a></li>
-                <li><a href="<?php echo esc_url($process_link); ?>">Process</a></li>
-                <li><a href="<?php echo esc_url($verdict_link); ?>">Verdict</a></li>
+                <li><a href="<?php echo esc_url($proof_link); ?>">Why Not AI</a></li>
+                <li><a href="<?php echo esc_url($video_link); ?>">Video</a></li>
+                <li><a href="<?php echo esc_url($reviews_link); ?>">Reviews</a></li>
                 <li><a href="<?php echo esc_url($contact_link); ?>">Contact</a></li>
             </ul>
         </nav>

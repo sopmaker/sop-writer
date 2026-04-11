@@ -7,8 +7,8 @@
 ?>
 <footer class="site-footer" id="contact">
     <div class="container">
-        <h2>Begin with confidence.</h2>
-        <p><strong>Connect with Prakash</strong> for high-stakes SOP writing delivered with discretion, precision, and senior ownership.</p>
+        <h2>Talk directly to Prakash in Delhi.</h2>
+        <p><strong>SOP by Prakash</strong> offers personalized SOP, LOR, profile, resume, admission, and visa SOP guidance with a free SOP audit/review.</p>
     </div>
 </footer>
 <?php wp_footer(); ?>

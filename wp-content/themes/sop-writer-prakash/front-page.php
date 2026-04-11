@@ -6,167 +6,119 @@
  */
 
 get_header();
+
+$prakash_image_url = 'https://sop-writer.in/wp-content/uploads/2026/02/prakash-sop-india.jpg';
+$client_chat_image_url = 'https://sop-writer.in/wp-content/uploads/2025/07/sop-writing-client.png';
+$youtube_video_url = 'https://www.youtube.com/embed/JnYweo2khlw';
+$google_reviews_embed_url = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.9466727296626!2d77.09129197412494!3d28.48115259094144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19a45667bc61%3A0xc5bf5878d5222956!2sSOP-Writer.in%20-%20SOP%20Writing%20Services!5e0!3m2!1sen!2sin!4v1682795940888!5m2!1sen!2sin';
 ?>
 
 <main>
-    <section class="hero">
+    <section class="hero" id="about">
         <div class="container hero-grid">
             <div>
-                <span class="eyebrow">Luxury Editorial SOP Counsel</span>
-                <h1>Prakash</h1>
-                <p class="hero-subtitle">India's foremost SOP specialist.</p>
+                <span class="eyebrow">Delhi-Based Personal SOP Consultancy</span>
+                <h1>SOP by Prakash</h1>
+                <p class="hero-subtitle">Built personally by Prakash for students and their parents.</p>
                 <p>
-                    Built for applicants who cannot afford uncertainty, this practice delivers statement of purpose
-                    writing with legal-grade structure, consulting-level rigor, and editorial polish expected by global
-                    institutions.
+                    At SOP by Prakash, every application story is crafted by one expert—not by a random team and never by copy-paste templates.
+                    Parents get confidence, students get clarity, and every SOP is tailored to real goals, real profile history, and real visa/admission expectations.
                 </p>
                 <div class="cta-row">
-                    <a class="btn btn-primary" href="#contact">Book a Consultation</a>
-                    <a class="btn btn-secondary" href="#verdict">Read the Verdict</a>
+                    <a class="btn btn-primary" href="#audit">Get Free SOP Audit/Review</a>
+                    <a class="btn btn-secondary" href="https://sop-writer.in" target="_blank" rel="noopener noreferrer">Visit Current Website</a>
+                </div>
+                <div class="hero-tags" aria-label="Highlights">
+                    <span>100% Personalized Drafting</span>
+                    <span>Directly by Prakash</span>
+                    <span>Trusted in Delhi &amp; Beyond</span>
                 </div>
             </div>
-            <aside class="hero-card">
-                <h2>Authority by design</h2>
-                <div class="stats">
-                    <div class="stat">
-                        <strong>8.5+ Years</strong>
-                        <span>Specialized SOP execution across admissions and visa pathways</span>
-                    </div>
-                    <div class="stat">
-                        <strong>One Principal</strong>
-                        <span>Your strategy and writing are led directly by Prakash</span>
-                    </div>
-                    <div class="stat">
-                        <strong>High-Stakes Ready</strong>
-                        <span>Disciplined narrative architecture built for scrutiny</span>
-                    </div>
-                </div>
+            <aside class="hero-card profile-card">
+                <img src="<?php echo esc_url($prakash_image_url); ?>" alt="Prakash holding a trophy in a professional suit" loading="lazy">
+                <p>
+                    <strong>Prakash</strong> is the face, strategist, and writer behind SOP by Prakash.
+                    No outsourcing. No generic AI phrasing. Just experienced, profile-specific human writing.
+                </p>
             </aside>
         </div>
     </section>
 
-    <section id="profile">
-        <div class="container">
-            <h2>Principal Profile</h2>
+    <section id="audit">
+        <div class="container card banner-card">
+            <span class="section-kicker">Free Value First</span>
+            <h2>Free SOP Audit/Review for Students &amp; Parents</h2>
             <p class="section-lead">
-                Prakash brings a boutique advisory model to SOP writing: selective intake, deep profile diagnosis, and
-                precise drafting. Each engagement is treated as a formal case where narrative, intent, and evidence
-                must align without compromise.
+                Share your existing SOP and get direct feedback from Prakash on structure, tone, relevance, and rejection risks before you submit.
             </p>
-            <div class="grid-3">
-                <article class="card">
-                    <h3>Strategic Positioning</h3>
-                    <p>Your profile is framed with intent, clarity, and institutional relevance.</p>
-                </article>
-                <article class="card">
-                    <h3>Editorial Precision</h3>
-                    <p>Every paragraph is calibrated for flow, confidence, and decision-maker readability.</p>
-                </article>
-                <article class="card">
-                    <h3>Professional Accountability</h3>
-                    <p>Senior oversight is never delegated, diluted, or outsourced.</p>
-                </article>
-            </div>
+            <a class="btn btn-primary" href="#contact">Request Your Free Audit</a>
         </div>
     </section>
 
     <section id="services">
         <div class="container">
+            <span class="section-kicker">What We Offer</span>
             <h2>Services</h2>
-            <p class="section-lead">
-                Engagements are designed for serious candidates across competitive tracks where document quality directly
-                impacts outcomes.
-            </p>
             <div class="grid-3">
-                <article class="card">
-                    <h3>Admissions SOPs</h3>
-                    <p>Undergraduate, postgraduate, MBA, and specialized academic applications.</p>
-                </article>
-                <article class="card">
-                    <h3>Visa SOPs</h3>
-                    <p>Country-aware statements aligned with policy expectations and intent clarity.</p>
-                </article>
-                <article class="card">
-                    <h3>Complex Profiles</h3>
-                    <p>Career pivots, gap years, refusals, and non-linear journeys handled with rigor.</p>
-                </article>
+                <article class="card"><h3>SOP</h3><p>Personalized Statements of Purpose for admissions and visas.</p></article>
+                <article class="card"><h3>LOR</h3><p>Powerful Letters of Recommendation aligned with your profile and goals.</p></article>
+                <article class="card"><h3>Profile Assistance</h3><p>Strategic profiling and positioning to strengthen your complete application.</p></article>
+                <article class="card"><h3>Resume</h3><p>Academic and professional resume building for global admissions.</p></article>
+                <article class="card"><h3>Admission Support</h3><p>End-to-end support for document planning and application readiness.</p></article>
+                <article class="card"><h3>Visa SOP</h3><p>Country-focused SOPs that address credibility, intent, and compliance.</p></article>
             </div>
         </div>
     </section>
 
-    <section id="process">
+    <section id="proof">
+        <div class="container proof-grid">
+            <div>
+                <span class="section-kicker">Why Human SOP Matters</span>
+                <h2>AI-Generated SOPs Often Get Rejected</h2>
+                <p class="section-lead">
+                    Many students think AI can replace expert SOP strategy. In reality, repetitive language, weak personalization,
+                    and generic arguments can trigger rejection.
+                </p>
+                <p>
+                    This real WhatsApp screenshot highlights a client regret: writing SOP with AI led to rejection from Canada.
+                    The lesson is simple—high-stakes SOPs need experienced human judgement.
+                </p>
+            </div>
+            <aside class="card media-card">
+                <img src="<?php echo esc_url($client_chat_image_url); ?>" alt="WhatsApp chat screenshot where client regrets using AI SOP and was rejected by Canada" loading="lazy">
+            </aside>
+        </div>
+    </section>
+
+    <section id="video">
         <div class="container">
-            <h2>Engagement Process</h2>
-            <p class="section-lead">
-                A structured, executive-style process minimizes noise and maximizes clarity from first brief to final
-                submission draft.
-            </p>
-            <div class="grid-3">
-                <article class="card">
-                    <h3>01 — Diagnostic Briefing</h3>
-                    <p>Goals, profile strengths, risk areas, and destination requirements are mapped.</p>
-                </article>
-                <article class="card">
-                    <h3>02 — Narrative Architecture</h3>
-                    <p>A decisive storyline is built to connect background, purpose, and future trajectory.</p>
-                </article>
-                <article class="card">
-                    <h3>03 — Final Editorial Finish</h3>
-                    <p>Tone, logic, cadence, and authenticity are refined to premium submission standards.</p>
-                </article>
+            <span class="section-kicker">Learn from Prakash</span>
+            <h2>How to Write a Winning SOP by Yourself</h2>
+            <div class="video-wrap card">
+                <iframe src="<?php echo esc_url($youtube_video_url); ?>" title="How to write a winning SOP by yourself" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </div>
     </section>
 
-    <section>
+    <section id="countries">
         <div class="container">
-            <h2>Institutional Confidence</h2>
-            <p class="section-lead">
-                This practice is built for applicants who value discretion, precision, and strategic communication over
-                volume-driven drafting pipelines.
-            </p>
-            <div class="grid-3">
-                <article class="card">
-                    <h3>Confidential Handling</h3>
-                    <p>Every profile and personal detail is managed with strict professional discretion.</p>
-                </article>
-                <article class="card">
-                    <h3>Senior-Led Delivery</h3>
-                    <p>No transfer to interns or anonymous writers after onboarding.</p>
-                </article>
-                <article class="card">
-                    <h3>Decision-Focused Writing</h3>
-                    <p>Built for admissions and immigration evaluators who prioritize coherence and intent.</p>
-                </article>
+            <span class="section-kicker">Global Support</span>
+            <h2>Countries We Serve</h2>
+            <p class="section-lead">We support students applying to almost all major study destinations across the world.</p>
+            <div class="country-list" aria-label="Countries served">
+                <span>Canada</span><span>USA</span><span>UK</span><span>Australia</span><span>New Zealand</span>
+                <span>Germany</span><span>Ireland</span><span>France</span><span>Netherlands</span><span>Singapore</span>
+                <span>UAE</span><span>Europe &amp; More</span>
             </div>
         </div>
     </section>
 
-    <section id="verdict">
+    <section id="reviews">
         <div class="container">
-            <h2>Prakash vs Agencies — The Verdict</h2>
-            <p class="section-lead">
-                In high-stakes SOP work, presentation without depth is a liability. The distinction is straightforward.
-            </p>
-            <div class="comparison">
-                <article class="card highlight">
-                    <h3>For Prakash</h3>
-                    <ul>
-                        <li>Principal-led drafting with senior accountability from start to finish</li>
-                        <li>Case-specific strategy built around your actual profile and goals</li>
-                        <li>Editorial discipline designed for critical institutional review</li>
-                        <li>Consistent quality standard with no workflow handoffs</li>
-                    </ul>
-                </article>
-                <article class="card">
-                    <h3>For Typical Agencies</h3>
-                    <ul>
-                        <li>Drafting is frequently delegated into junior-heavy delivery chains</li>
-                        <li>Turnaround speed can override strategic narrative depth</li>
-                        <li>Quality often fluctuates between writers and revisions</li>
-                        <li>Generic language increases risk in decisive applications</li>
-                    </ul>
-                </article>
+            <span class="section-kicker">Verified Trust</span>
+            <h2>Google Reviews</h2>
+            <div class="map-wrap card">
+                <iframe src="<?php echo esc_url($google_reviews_embed_url); ?>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="SOP Writer Google Reviews"></iframe>
             </div>
         </div>
     </section>
