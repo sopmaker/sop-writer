@@ -5,10 +5,13 @@
  * @package SOP_Writer_Prakash
  */
 ?>
-<footer class="site-footer" id="contact">
-    <div class="container">
-        <h2>Talk directly to Prakash in Delhi.</h2>
-        <p><strong>SOP by Prakash</strong> offers personalized SOP, LOR, profile, resume, admission, and visa SOP guidance with a free SOP audit/review.</p>
+<footer class="site-footer">
+    <div class="container footer-grid">
+        <div>
+            <h2>SOP by Prakash</h2>
+            <p>Personalized SOP, LOR, resume, and admission document support with a human-first writing process.</p>
+        </div>
+        <p class="footer-copy">&copy; <?php echo esc_html(date_i18n('Y')); ?> SOP by Prakash. All rights reserved.</p>
     </div>
 </footer>
 <?php wp_footer(); ?>

@@ -17,8 +17,9 @@
 <?php
 $about_link = is_front_page() ? '#about' : home_url('/#about');
 $services_link = is_front_page() ? '#services' : home_url('/#services');
-$proof_link = is_front_page() ? '#proof' : home_url('/#proof');
-$video_link = is_front_page() ? '#video' : home_url('/#video');
+$process_link = is_front_page() ? '#process' : home_url('/#process');
+$countries_link = is_front_page() ? '#countries' : home_url('/#countries');
+$colleges_link = is_front_page() ? '#colleges' : home_url('/#colleges');
 $reviews_link = is_front_page() ? '#reviews' : home_url('/#reviews');
 $contact_link = is_front_page() ? '#contact' : home_url('/#contact');
 ?>
@@ -31,8 +32,9 @@ $contact_link = is_front_page() ? '#contact' : home_url('/#contact');
             <ul class="menu">
                 <li><a href="<?php echo esc_url($about_link); ?>">About</a></li>
                 <li><a href="<?php echo esc_url($services_link); ?>">Services</a></li>
-                <li><a href="<?php echo esc_url($proof_link); ?>">Why Not AI</a></li>
-                <li><a href="<?php echo esc_url($video_link); ?>">Video</a></li>
+                <li><a href="<?php echo esc_url($process_link); ?>">Process</a></li>
+                <li><a href="<?php echo esc_url($countries_link); ?>">Countries</a></li>
+                <li><a href="<?php echo esc_url($colleges_link); ?>">Colleges</a></li>
                 <li><a href="<?php echo esc_url($reviews_link); ?>">Reviews</a></li>
                 <li><a href="<?php echo esc_url($contact_link); ?>">Contact</a></li>
             </ul>
