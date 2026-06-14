@@ -18,9 +18,7 @@
 $about_link = is_front_page() ? '#about' : home_url('/#about');
 $services_link = is_front_page() ? '#services' : home_url('/#services');
 $process_link = is_front_page() ? '#process' : home_url('/#process');
-$countries_link = is_front_page() ? '#countries' : home_url('/#countries');
-$colleges_link = is_front_page() ? '#colleges' : home_url('/#colleges');
-$reviews_link = is_front_page() ? '#reviews' : home_url('/#reviews');
+$success_vault_link = is_front_page() ? '#success-vault' : home_url('/#success-vault');
 $contact_link = is_front_page() ? '#contact' : home_url('/#contact');
 ?>
 <header class="site-header">
@@ -33,11 +31,10 @@ $contact_link = is_front_page() ? '#contact' : home_url('/#contact');
                 <li><a href="<?php echo esc_url($about_link); ?>">About</a></li>
                 <li><a href="<?php echo esc_url($services_link); ?>">Services</a></li>
                 <li><a href="<?php echo esc_url($process_link); ?>">Process</a></li>
-                <li><a href="<?php echo esc_url($countries_link); ?>">Countries</a></li>
-                <li><a href="<?php echo esc_url($colleges_link); ?>">Colleges</a></li>
-                <li><a href="<?php echo esc_url($reviews_link); ?>">Reviews</a></li>
+                <li><a href="<?php echo esc_url($success_vault_link); ?>">Success Vault</a></li>
                 <li><a href="<?php echo esc_url($contact_link); ?>">Contact</a></li>
             </ul>
         </nav>
+        <a class="btn btn-primary nav-cta" href="<?php echo esc_url($contact_link); ?>">Book Strategy Call</a>
     </div>
 </header>

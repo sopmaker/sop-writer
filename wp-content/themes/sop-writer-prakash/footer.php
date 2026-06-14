@@ -9,9 +9,9 @@
     <div class="container footer-grid">
         <div>
             <h2>SOP by Prakash</h2>
-            <p>Personalized SOP, LOR, resume, and admission document support with a human-first writing process.</p>
+            <p>Personalized SOP, LOR, resume, and admission document support built around a dedicated human-first writing process.</p>
         </div>
-        <p class="footer-copy">&copy; <?php echo esc_html(date_i18n('Y')); ?> SOP by Prakash. All rights reserved.</p>
+        <p class="footer-copy">&copy; 2026 SOP by Prakash. All rights reserved.</p>
     </div>
 </footer>
 <?php wp_footer(); ?>

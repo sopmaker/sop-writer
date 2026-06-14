@@ -46,7 +46,7 @@ function sop_writer_prakash_handle_contact_form()
     $email = isset($_POST['email']) ? sanitize_email(wp_unslash($_POST['email'])) : '';
     $phone = isset($_POST['phone']) ? sanitize_text_field(wp_unslash($_POST['phone'])) : '';
     $target_country = isset($_POST['target_country']) ? sanitize_text_field(wp_unslash($_POST['target_country'])) : '';
-    $service_needed = isset($_POST['service_needed']) ? sanitize_text_field(wp_unslash($_POST['service_needed'])) : '';
+    $intended_program = isset($_POST['intended_program']) ? sanitize_text_field(wp_unslash($_POST['intended_program'])) : '';
     $message = isset($_POST['message']) ? sanitize_textarea_field(wp_unslash($_POST['message'])) : '';
 
     if (empty($full_name) || empty($email) || empty($message) || !is_email($email)) {
@@ -63,7 +63,7 @@ function sop_writer_prakash_handle_contact_form()
         'Email: ' . $email,
         'Phone: ' . $phone,
         'Target Country: ' . $target_country,
-        'Service Needed: ' . $service_needed,
+        'Intended Program: ' . $intended_program,
         '',
         'Message:',
         $message,
