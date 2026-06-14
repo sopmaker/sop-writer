@@ -57,7 +57,7 @@ $faq_schema_entities = array_map(
     static function ($item) {
         $answer = $item['answer'];
         if (!empty($item['extra'])) {
-            $answer .= ' ' . $item['extra'];
+            $answer .= ' ↳ This is the one promise worth being suspicious of when other consultants make it. ' . $item['extra'];
         }
 
         return [
