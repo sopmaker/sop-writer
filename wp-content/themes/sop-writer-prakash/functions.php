@@ -24,9 +24,16 @@ add_action('after_switch_theme', 'sop_writer_prakash_register_section_pages');
 function sop_writer_prakash_assets()
 {
     wp_enqueue_style(
+        'sop-writer-prakash-fonts',
+        'https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&family=Source+Sans+3:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap',
+        [],
+        null
+    );
+
+    wp_enqueue_style(
         'sop-writer-prakash-style',
         get_stylesheet_uri(),
-        [],
+        ['sop-writer-prakash-fonts'],
         wp_get_theme()->get('Version')
     );
 }
