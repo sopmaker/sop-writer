@@ -40,6 +40,37 @@ function sop_writer_prakash_assets()
 add_action('wp_enqueue_scripts', 'sop_writer_prakash_assets');
 
 /**
+ * Customize homepage document title.
+ *
+ * @param array<string, string> $title_parts Current title parts.
+ * @return array<string, string>
+ */
+function sop_writer_prakash_home_title($title_parts)
+{
+    if (!is_front_page()) {
+        return $title_parts;
+    }
+
+    $title_parts['title'] = 'SOP by Prakash — Personalized SOP, LOR & Visa Document Writing | Direct Editor Access';
+    return $title_parts;
+}
+add_filter('document_title_parts', 'sop_writer_prakash_home_title');
+
+/**
+ * Add homepage meta description.
+ */
+function sop_writer_prakash_home_meta_description()
+{
+    if (!is_front_page()) {
+        return;
+    }
+    ?>
+    <meta name="description" content="Work directly with Prakash on your SOP, LOR, or VISA SOP — no agents, no templates. 10,000+ students guided across 100+ programs in 12+ countries. Free consultation.">
+    <?php
+}
+add_action('wp_head', 'sop_writer_prakash_home_meta_description', 1);
+
+/**
  * Handle contact form submissions.
  */
 function sop_writer_prakash_handle_contact_form()
@@ -53,7 +84,7 @@ function sop_writer_prakash_handle_contact_form()
     $email = isset($_POST['email']) ? sanitize_email(wp_unslash($_POST['email'])) : '';
     $phone = isset($_POST['phone']) ? sanitize_text_field(wp_unslash($_POST['phone'])) : '';
     $target_country = isset($_POST['target_country']) ? sanitize_text_field(wp_unslash($_POST['target_country'])) : '';
-    $intended_program = isset($_POST['intended_program']) ? sanitize_text_field(wp_unslash($_POST['intended_program'])) : '';
+    $service_needed = isset($_POST['service_needed']) ? sanitize_text_field(wp_unslash($_POST['service_needed'])) : '';
     $message = isset($_POST['message']) ? sanitize_textarea_field(wp_unslash($_POST['message'])) : '';
 
     if (empty($full_name) || empty($email) || empty($message) || !is_email($email)) {
@@ -70,7 +101,7 @@ function sop_writer_prakash_handle_contact_form()
         'Email: ' . $email,
         'Phone: ' . $phone,
         'Target Country: ' . $target_country,
-        'Intended Program: ' . $intended_program,
+        'Service Needed: ' . $service_needed,
         '',
         'Message:',
         $message,

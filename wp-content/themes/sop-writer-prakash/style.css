@@ -3,7 +3,7 @@ Theme Name: SOP Writer Prakash
 Theme URI: https://example.com/sop-writer-prakash
 Author: SOP Writer Team
 Description: Manuscript-inspired WordPress theme for SOP Writer Prakash.
-Version: 1.7.0
+Version: 1.8.0
 Text Domain: sop-writer-prakash
 */
 
@@ -542,6 +542,220 @@ blockquote cite {
   margin-top: 18px;
 }
 
+.tag-block {
+  margin-top: 26px;
+}
+
+.pill-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.pill-cloud span {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid var(--forest);
+  border-radius: 999px;
+  color: var(--forest);
+  background: var(--mist);
+  font-size: 0.92rem;
+}
+
+.dark-section {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.dark-section h2,
+.dark-section p {
+  color: var(--paper);
+}
+
+.dark-section .eyebrow {
+  color: var(--brass);
+}
+
+.btn-brass {
+  border-color: var(--brass);
+  color: var(--paper);
+  background: transparent;
+}
+
+.btn-brass:hover {
+  background: rgba(184, 134, 43, 0.12);
+}
+
+.callout-annotation {
+  margin: 20px 0 24px;
+  color: var(--marginalia);
+  font-family: "Space Mono", "Courier New", monospace;
+  font-size: 0.8rem;
+}
+
+.logo-strip-wrap {
+  overflow: hidden;
+  border: 1px solid var(--mist);
+  margin-top: 18px;
+  background: #fffdf8;
+}
+
+.logo-strip {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  width: max-content;
+  padding: 16px 20px;
+  animation: logo-marquee 40s linear infinite;
+}
+
+.logo-strip-wrap:hover .logo-strip {
+  animation-play-state: paused;
+}
+
+.logo-chip img {
+  width: 108px;
+  height: 52px;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.85;
+  transition: filter .2s ease, opacity .2s ease;
+}
+
+.logo-chip img:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+@keyframes logo-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.faq-wrap {
+  max-width: 720px;
+}
+
+.faq-accordion details {
+  border-top: 1px solid var(--mist);
+  padding: 14px 0;
+}
+
+.faq-accordion details:last-child {
+  border-bottom: 1px solid var(--mist);
+}
+
+.faq-accordion summary {
+  cursor: pointer;
+  list-style: none;
+  color: var(--forest);
+  font-family: "Newsreader", Georgia, serif;
+  font-size: clamp(1.2rem, 2.2vw, 1.45rem);
+}
+
+.faq-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-annotation {
+  color: var(--marginalia);
+  font-family: "Space Mono", "Courier New", monospace;
+  font-size: 0.78rem;
+}
+
+.review-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.review-card-stack p {
+  margin-bottom: 12px;
+}
+
+.review-byline {
+  font-size: 0.95rem;
+  color: #3b4d42;
+  margin: 0;
+}
+
+.video-frame {
+  margin-top: 28px;
+  border: 8px solid #fffdf7;
+  box-shadow: 0 8px 18px rgba(27, 42, 34, 0.1);
+  background: #fffdf7;
+}
+
+.video-frame iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  display: block;
+}
+
+.guides-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.guide-card img {
+  width: 100%;
+  height: 146px;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.guide-card a {
+  font-weight: 700;
+}
+
+.contact-grid-home {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.contact-form {
+  display: grid;
+  gap: 9px;
+}
+
+.contact-form label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--mist);
+  background: #fff;
+  color: var(--ink);
+  padding: 10px 11px;
+  font: inherit;
+}
+
+.form-message {
+  margin-top: 14px;
+  font-weight: 600;
+}
+
+.form-success {
+  color: var(--forest);
+}
+
+.form-error {
+  color: var(--marginalia);
+}
+
 .dev-note {
   margin-top: 20px;
   font-size: 0.68rem;
@@ -606,6 +820,16 @@ blockquote cite {
   letter-spacing: 0.06em;
 }
 
+.footer-links {
+  margin: 8px 0 0;
+  font-size: 0.95rem;
+}
+
+.footer-links a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 @media (max-width: 1060px) {
   .menu {
     flex-wrap: wrap;
@@ -635,7 +859,10 @@ blockquote cite {
   }
 
   .results-stack,
-  .pricing-grid {
+  .pricing-grid,
+  .review-row,
+  .guides-grid,
+  .contact-grid-home {
     grid-template-columns: 1fr;
     gap: 14px;
   }

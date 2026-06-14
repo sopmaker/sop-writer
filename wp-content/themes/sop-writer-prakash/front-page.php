@@ -7,10 +7,79 @@
 
 get_header();
 
+$content_data = sop_writer_prakash_get_content_data();
+$college_logo_items = $content_data['college_logo_items'];
+$client_reviews = $content_data['client_reviews'];
 $hero_image_url = 'https://sop-writer.in/wp-content/uploads/2026/02/prakash-sop-india.jpg';
 $meet_prakash_image_url = 'https://sop-writer.in/wp-content/uploads/2026/02/prakash-sop-india.jpg';
+$guide_thumb_url = 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=520&q=80';
+$contact_status = filter_input(INPUT_GET, 'contact_status', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $whatsapp_message = rawurlencode('Hi Prakash, I\'d like to talk about my SOP.');
 $whatsapp_url = 'https://wa.me/918447385389?text=' . $whatsapp_message;
+
+$faq_items = [
+    [
+        'question' => 'What is a Statement of Purpose (SOP)?',
+        'answer' => 'An SOP is a written document, usually 800–1,200 words, where you explain why you\'re applying to a specific program, what in your background supports that choice, and what you plan to do afterward. Universities use it to assess fit and motivation; visa officers sometimes review a version of it to assess intent.',
+    ],
+    [
+        'question' => 'Can universities tell if an SOP was written using AI?',
+        'answer' => 'Many universities now use AI-detection and authenticity checks alongside human review. AI-generated text often has a recognizable rhythm — even when factually accurate, it can read as generic. A profile-first SOP, written and edited by someone who knows your background, is less likely to be flagged and more likely to sound like an actual applicant.',
+    ],
+    [
+        'question' => 'Is it safe to use ChatGPT or other AI tools to write my SOP?',
+        'answer' => 'AI tools are useful for brainstorming or organizing your thoughts, but submitting AI-generated text directly carries risk — both from detection tools and from the SOP not reflecting your actual voice or specifics. The safer approach: use AI as a starting point, then have a human editor rebuild it around your real profile.',
+    ],
+    [
+        'question' => 'What\'s the difference between an SOP, a personal statement, and an LOR?',
+        'answer' => 'An SOP and a personal statement serve a similar purpose — explaining your motivation and fit for a program — but "personal statement" is more common terminology in the UK and for undergraduate applications. A Letter of Recommendation (LOR) is written by someone else, such as a professor or employer, vouching for you — not by the applicant.',
+    ],
+    [
+        'question' => 'How long does it take to get my SOP ready?',
+        'answer' => 'Timelines depend on the package and how far along your draft already is, but most SOPs go through 2–3 structured review cycles after the first draft. If you\'re working against a tight deadline, mention this during your free consultation so the schedule can be planned around it.',
+    ],
+    [
+        'question' => 'What if my SOP gets rejected — can I revise it with you?',
+        'answer' => 'Yes. A rejection or resubmission request usually means the SOP didn\'t address something specific, and that\'s identifiable and fixable. Rejection-stage SOPs are first reviewed for what likely went wrong before any rewriting starts.',
+    ],
+    [
+        'question' => 'Do you guarantee admission or a visa?',
+        'answer' => 'No — and any consultant who does is making a promise they can\'t keep. Admission and visa decisions are made by universities and government officers based on far more than one document.',
+        'extra' => 'What\'s guaranteed here: original, profile-based writing, direct access to the person doing the work, and a realistic assessment of your case.',
+    ],
+    [
+        'question' => 'How much does SOP writing cost in India?',
+        'answer' => 'Pricing depends on the service — SOP only, SOP + LOR, or full application support — and how many programs or applications are involved. See the Pricing section above for current starting prices. Every quote is given in writing during the free consultation, before any payment.',
+    ],
+];
+
+$faq_schema_entities = array_map(
+    static function ($item) {
+        $answer = $item['answer'];
+        if (!empty($item['extra'])) {
+            $answer .= ' ' . $item['extra'];
+        }
+
+        return [
+            '@type' => 'Question',
+            'name' => $item['question'],
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => $answer,
+            ],
+        ];
+    },
+    $faq_items
+);
+
+$service_schema_entities = [
+    'SOP Writing and Editing',
+    'LOR Writing and Editing',
+    'VISA SOP / Letter of Motivation Support',
+    'Profile Assessment',
+    'Admissions Resume Writing',
+    'Full Application Support',
+];
 ?>
 
 <main>
@@ -286,23 +355,175 @@ $whatsapp_url = 'https://wa.me/918447385389?text=' . $whatsapp_message;
         </div>
     </section>
 
-    <section id="faq">
+    <section id="programs-visa">
         <div class="container narrow">
-            <p class="eyebrow">FAQ</p>
+            <h2>Programs and Visa Categories We Work On</h2>
+            <div class="tag-block">
+                <h3>By Program Type</h3>
+                <p>SOPs are written differently depending on the program — a PhD SOP needs to demonstrate research fit, while a diploma SOP needs to demonstrate intent and progression. Prakash adjusts structure and tone to match what reviewers for each program type are actually looking for.</p>
+                <div class="pill-cloud" aria-label="Program types">
+                    <span>SOP for PhD</span><span>SOP for Master&#39;s</span><span>SOP for Postgraduate Diploma</span><span>SOP for Bachelor&#39;s</span><span>SOP for Financial Aid Applications</span><span>Master&#39;s in Data Science SOP</span><span>MS in Computer Science SOP</span><span>Master&#39;s in Business Analytics SOP</span><span>Master&#39;s in Cybersecurity SOP</span><span>Master&#39;s in Public Health SOP</span>
+                </div>
+            </div>
+            <div class="tag-block">
+                <h3>By Visa Category</h3>
+                <p>Visa officers read SOPs (or Letters of Explanation/Motivation) differently from admissions committees — they&#39;re assessing intent, ties, and credibility, not just academic fit. Country-specific expectations matter here more than almost anywhere else.</p>
+                <div class="pill-cloud" aria-label="Visa categories">
+                    <span>Study Visa SOP</span><span>Tourist Visa SOP</span><span>Research Position SOP</span><span>Academic Transfer SOP</span><span>Dependent Visa SOP</span><span>Spouse Visa SOP</span><span>Work Visa SOP</span><span>SOP for Master&#39;s in the UK</span><span>SOP for Master&#39;s in Canada</span><span>SOP for Master&#39;s in Australia</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ai-callout" class="dark-section">
+        <div class="container narrow">
+            <p class="eyebrow">Before You Submit</p>
+            <h2>Did You Write Your SOP Using AI?</h2>
+            <p>AI tools can help you think and draft — but most universities now run authenticity checks, and a visibly AI-shaped SOP can quietly work against a fee-paying application. The fix isn&#39;t necessarily starting over. It&#39;s a profile-first edit that keeps your real story and removes what makes a draft sound machine-written.</p>
+            <aside class="callout-annotation">Common giveaway: sentences that are grammatically flawless but say nothing specific about you. A reviewer notices the second one before the first.</aside>
+            <a class="btn btn-brass" href="#contact">Get an Honest Read of Your Draft</a>
+        </div>
+    </section>
+
+    <section id="countries-universities">
+        <div class="container">
+            <p class="eyebrow">Countries We Serve for SOP &amp; LOR Guidance</p>
+            <h2>Where Students Have Applied — and Gotten In</h2>
+            <h3>Countries</h3>
+            <p>Each country has its own SOP and visa-document conventions — what a UK personal statement expects is different from a Canadian study-permit SOP, which is different again from a US graduate statement of purpose.</p>
+            <div class="pill-cloud" aria-label="Countries">
+                <span>Canada</span><span>United States</span><span>United Kingdom</span><span>Australia</span><span>New Zealand</span><span>Germany</span><span>France</span><span>Ireland</span><span>Italy</span><span>Singapore</span><span>South Korea</span><span>UAE</span>
+            </div>
+            <h3>Universities</h3>
+            <p>A sample of universities students have been admitted to after working on their SOPs here — not an exhaustive list, and not a promise of similar outcomes for every applicant.</p>
+            <div class="logo-strip-wrap">
+                <div class="logo-strip" aria-label="University logos">
+                    <?php foreach (array_merge($college_logo_items, $college_logo_items) as $college_logo_item) : ?>
+                        <div class="logo-chip">
+                            <img src="<?php echo esc_url($college_logo_item['logo']); ?>" alt="<?php echo esc_attr($college_logo_item['name']); ?> logo" loading="lazy">
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <div class="container narrow faq-wrap">
+            <p class="eyebrow">Questions People Ask Before Booking</p>
             <h2>Frequently Asked Questions</h2>
-            <p class="section-intro">The full FAQ block will be added in the next brief section.</p>
-            <!-- TODO: Add final FAQ content and one light track-changes example from part 3 of the brief -->
+            <div class="faq-accordion">
+                <?php foreach ($faq_items as $index => $faq_item) : ?>
+                    <details <?php echo 0 === $index ? 'open' : ''; ?>>
+                        <summary><?php echo esc_html($faq_item['question']); ?></summary>
+                        <p><?php echo esc_html($faq_item['answer']); ?></p>
+                        <?php if (!empty($faq_item['extra'])) : ?>
+                            <p class="faq-annotation">↳ This is the one promise worth being suspicious of when other consultants make it.</p>
+                            <p><?php echo esc_html($faq_item['extra']); ?></p>
+                        <?php endif; ?>
+                    </details>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews-video">
+        <div class="container">
+            <p class="eyebrow">Client Reviews</p>
+            <h2>What Students &amp; Parents Say</h2>
+            <div class="review-row">
+                <?php foreach ($client_reviews as $review_index => $client_review) : ?>
+                    <article class="paper-card review-card-stack <?php echo 0 === $review_index % 2 ? 'tilt-left' : 'tilt-right'; ?>">
+                        <p>&ldquo;<?php echo esc_html($client_review['text']); ?>&rdquo;</p>
+                        <p class="review-byline">— <?php echo esc_html($client_review['name']); ?></p>
+                    </article>
+                <?php endforeach; ?>
+            </div>
+            <div class="video-frame">
+                <iframe src="https://www.youtube.com/embed?listType=search&amp;list=Beyond%20Borders%20with%20Prakash" title="Beyond Borders with Prakash" loading="lazy" allowfullscreen></iframe>
+            </div>
+            <p class="dev-note"><strong>Dev note:</strong> As more reviews come in, prefer ones that name the program/intake and outcome (with the client&#39;s permission) over generic praise — these are more useful for both readers and AI-search citation.</p>
+        </div>
+    </section>
+
+    <section id="free-guides">
+        <div class="container">
+            <p class="eyebrow">Free Guidance, Written by Prakash</p>
+            <h2>Before You Book, Read This</h2>
+            <div class="guides-grid">
+                <article class="paper-card guide-card">
+                    <img src="<?php echo esc_url($guide_thumb_url); ?>" alt="Passport and visa documents on a desk" loading="lazy">
+                    <h3>How to Write an SOP for a Canadian Study Permit</h3>
+                    <p>What Canadian visa officers are actually looking for, and how it differs from a university admissions SOP.</p>
+                    <a href="#">Read Guide</a>
+                </article>
+                <article class="paper-card guide-card">
+                    <img src="<?php echo esc_url($guide_thumb_url); ?>" alt="Draft documents and notes on a desk" loading="lazy">
+                    <h3>SOP vs. Personal Statement: What&#39;s Actually Different</h3>
+                    <p>The terminology changes by country — here&#39;s what stays the same and what doesn&#39;t.</p>
+                    <a href="#">Read Guide</a>
+                </article>
+                <article class="paper-card guide-card">
+                    <img src="<?php echo esc_url($guide_thumb_url); ?>" alt="Laptop with edited SOP draft" loading="lazy">
+                    <h3>How to Tell If Your SOP Sounds AI-Written (And How to Fix It)</h3>
+                    <p>The patterns reviewers notice, and how to edit them out without starting over.</p>
+                    <a href="#">Read Guide</a>
+                </article>
+            </div>
+            <p class="dev-note"><strong>Dev note:</strong> [PLACEHOLDER — articles need to be written]. These three titles are recommended starting topics based on common search queries in this space. Each should be a full article (800+ words) living at its own URL, linked from here.</p>
         </div>
     </section>
 
     <section id="contact">
         <div class="container narrow">
-            <p class="eyebrow">Contact</p>
-            <h2>Talk Directly to Prakash</h2>
-            <p class="section-intro">The complete contact section and form will be added in the next brief section.</p>
-            <p><strong>Phone / WhatsApp:</strong> <a href="tel:+918447385389">+91 84473 85389</a></p>
-            <p><strong>Email:</strong> <a href="mailto:contact@sop-writer.in">contact@sop-writer.in</a></p>
-            <!-- TODO: Add final conversion form structure from part 3 of the brief -->
+            <div class="contact-grid-home">
+                <div>
+                    <p class="eyebrow">Contact Prakash</p>
+                    <h2>Talk to Prakash Directly</h2>
+                    <p>Share your profile and target program, and Prakash will personally get back to you. This isn&#39;t routed through a sales team.</p>
+                    <p><strong>Phone / WhatsApp:</strong> <a href="tel:+918447385389">+91 84473 85389</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:contact@sop-writer.in">contact@sop-writer.in</a></p>
+                    <p>Prefer WhatsApp? <a href="<?php echo esc_url($whatsapp_url); ?>" target="_blank" rel="noopener noreferrer">Message on WhatsApp</a> — usually the fastest way to reach Prakash directly.</p>
+                    <?php if ('success' === $contact_status) : ?>
+                        <p class="form-message form-success">Thanks! Your message has been submitted successfully.</p>
+                    <?php elseif ('failed' === $contact_status) : ?>
+                        <p class="form-message form-error">Something went wrong. Please try again or contact us directly.</p>
+                    <?php endif; ?>
+                </div>
+                <div class="paper-card no-tilt contact-form-wrap">
+                    <form class="contact-form" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post">
+                        <input type="hidden" name="action" value="sop_writer_prakash_contact">
+                        <?php wp_nonce_field('sop_writer_prakash_contact_nonce', 'sop_writer_prakash_contact_nonce'); ?>
+
+                        <label for="sp-name">Full Name *</label>
+                        <input id="sp-name" type="text" name="full_name" required>
+
+                        <label for="sp-email">Email *</label>
+                        <input id="sp-email" type="email" name="email" required>
+
+                        <label for="sp-phone">Phone / WhatsApp</label>
+                        <input id="sp-phone" type="text" name="phone">
+
+                        <label for="sp-country">Target Country</label>
+                        <input id="sp-country" type="text" name="target_country">
+
+                        <label for="sp-service">Service Needed</label>
+                        <select id="sp-service" name="service_needed">
+                            <option value="SOP">SOP</option>
+                            <option value="LOR">LOR</option>
+                            <option value="VISA SOP">VISA SOP</option>
+                            <option value="Profile Assessment">Profile Assessment</option>
+                            <option value="Resume">Resume</option>
+                            <option value="Full Application Support">Full Application Support</option>
+                        </select>
+
+                        <label for="sp-message">Message *</label>
+                        <textarea id="sp-message" name="message" rows="4" required></textarea>
+
+                        <button class="btn btn-primary" type="submit">Submit Inquiry</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 </main>
@@ -335,6 +556,78 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', toggleButton, { passive: true });
 });
 </script>
+
+<script type="application/ld+json">
+<?php
+echo wp_json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'FAQPage',
+    'mainEntity' => $faq_schema_entities,
+], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+?>
+</script>
+<script type="application/ld+json">
+<?php
+echo wp_json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'Person',
+    'name' => 'Prakash',
+    'jobTitle' => 'SOP Editor',
+    'worksFor' => [
+        '@type' => 'Organization',
+        'name' => 'SOP by Prakash',
+    ],
+    'sameAs' => [
+        'https://instagram.com/prakashabroad',
+        'https://www.youtube.com/@beyondborderswithprakash',
+    ],
+], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+?>
+</script>
+<script type="application/ld+json">
+<?php
+echo wp_json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => ['Organization', 'ProfessionalService'],
+    'name' => 'SOP by Prakash',
+    'url' => home_url('/'),
+    'telephone' => '+91 84473 85389',
+    'email' => 'contact@sop-writer.in',
+    'areaServed' => [
+        'India',
+        'Canada',
+        'United States',
+        'United Kingdom',
+        'Australia',
+        'New Zealand',
+        'Germany',
+        'France',
+        'Ireland',
+        'Italy',
+        'Singapore',
+        'South Korea',
+        'United Arab Emirates',
+    ],
+], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+?>
+</script>
+<?php foreach ($service_schema_entities as $service_schema_name) : ?>
+    <script type="application/ld+json">
+    <?php
+    echo wp_json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'Service',
+        'name' => $service_schema_name,
+        'provider' => [
+            '@type' => 'ProfessionalService',
+            'name' => 'SOP by Prakash',
+            'url' => home_url('/'),
+        ],
+        'areaServed' => 'India',
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+    ?>
+    </script>
+<?php endforeach; ?>
 
 <?php
 get_footer();
